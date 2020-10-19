@@ -29,6 +29,6 @@ func Warn(message string) {
 // and prepends it with [FAIL] in bold red text.
 // It also exits the program with an exit code of 1.
 func Fail(message string) {
-	fmt.Println(aurora.Red(aurora.Bold("[FATL]")), message)
+	fmt.Println(aurora.Red(aurora.Bold("[FAIL]")), message)
 	os.Exit(1)
 }
