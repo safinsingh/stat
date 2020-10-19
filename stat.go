@@ -9,46 +9,46 @@ import (
 
 // Success prints a successful message to the console
 // and prepends it with [SCSS] in bold green text.
-func Success(message string) {
+func Success(message ...interface{}) {
 	fmt.Println(
 		aurora.Green(
 			aurora.Bold("[SCSS]"),
 		),
-		message,
+		fmt.Sprint(message...),
 	)
 }
 
 // Info prints an informational message to the console
 // and prepends it with [INFO] in bold cyan text.
-func Info(message string) {
+func Info(message ...interface{}) {
 	fmt.Println(
 		aurora.Cyan(
 			aurora.Bold("[INFO]"),
 		),
-		message,
+		fmt.Sprint(message...),
 	)
 }
 
 // Warn prints a warning message to the console
 // and prepends it with [WARN] in bold yellow text.
-func Warn(message string) {
+func Warn(message ...interface{}) {
 	fmt.Println(
 		aurora.Yellow(
 			aurora.Bold("[WARN]"),
 		),
-		message,
+		fmt.Sprint(message...),
 	)
 }
 
 // Fail prints an error message to the console
 // and prepends it with [FAIL] in bold red text.
 // It also exits the program with an exit code of 1.
-func Fail(message string) {
+func Fail(message ...interface{}) {
 	fmt.Println(
 		aurora.Red(
 			aurora.Bold("[FAIL]"),
 		),
-		message,
+		fmt.Sprint(message...),
 	)
 	os.Exit(1)
 }
