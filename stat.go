@@ -70,7 +70,7 @@ func SuccessF(format string, message ...interface{}) {
 
 // InfoF prints an informational message given
 // a format string to the console and prepends
-// it with [SCSS] in bold yellow text.
+// it with [INFO] in bold cyan text.
 func InfoF(format string, message ...interface{}) {
 	fmt.Println(
 		aurora.Cyan(
@@ -98,9 +98,10 @@ func WarnF(format string, message ...interface{}) {
 	)
 }
 
-// FailF prints an error message given
-// a format string to the console and prepends
-// it with [FAIL] in bold red text.
+// FailF prints an error message given a
+// format string to the console and prepends
+// it with [FAIL] in bold red text. It also
+// exits the program with an exit code of 1.
 func FailF(format string, message ...interface{}) {
 	fmt.Println(
 		aurora.Red(
